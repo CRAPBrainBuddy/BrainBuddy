@@ -4,6 +4,7 @@ import 'package:brainbuddy/condition_container.dart';
 import 'package:brainbuddy/mybookings.dart';
 import 'package:brainbuddy/expertlist.dart';
 import 'package:brainbuddy/allexpertpage.dart';
+import 'package:brainbuddy/musicplayer.dart';
 
 class Expert_Detail extends StatelessWidget {
   final List _condition = ['All','Stress','Anxiety','Insomia','Hyper Tension'];
@@ -18,7 +19,7 @@ class Expert_Detail extends StatelessWidget {
 
     void mybooking() {
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => MyBooking()));
+          context, MaterialPageRoute(builder: (context) => MusicPlayer()));
     }
 
     return Scaffold(

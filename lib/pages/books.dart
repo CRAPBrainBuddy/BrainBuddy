@@ -27,7 +27,8 @@ class Books extends StatelessWidget {
                       scrollDirection: Axis.vertical,
                       itemCount: _books.length,
                       itemBuilder: (context, index) {
-                        return Activity_detail(child: _books[index]);
+                        return Scaffold();
+                        // return Activity_detail(child: _books[index]);
                       }),
                 ),
               ),

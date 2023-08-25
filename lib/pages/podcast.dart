@@ -29,7 +29,8 @@ class PodCast extends StatelessWidget {
                       scrollDirection: Axis.vertical,
                       itemCount: _podcast.length,
                       itemBuilder: (context, index) {
-                        return Activity_detail(child: _podcast[index]);
+                        return Scaffold();
+                        // return Activity_detail(child: _podcast[index]);
                       }),
                 ),
               ),

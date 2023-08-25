@@ -29,7 +29,8 @@ class Music extends StatelessWidget {
                       scrollDirection: Axis.vertical,
                       itemCount: _music.length,
                       itemBuilder: (context, index) {
-                        return Activity_detail(child: _music[index]);
+                        return Scaffold();
+                        // return Activity_detail(child: _music[index]);
                       }),
                 ),
               ),
