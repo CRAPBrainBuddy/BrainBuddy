@@ -2,6 +2,7 @@ import 'package:brainbuddy/MySignUp.dart';
 import 'package:brainbuddy/my_button.dart';
 import 'package:brainbuddy/textfield.dart';
 import 'package:flutter/material.dart';
+import 'package:brainbuddy/home2.dart';
 
 class MyLogin extends StatefulWidget {
   MyLogin({Key? key}) : super(key: key);
@@ -16,15 +17,15 @@ class _MyLoginState extends State<MyLogin> {
   {
     final userNameConroller = TextEditingController();
     final PasswordNameController = TextEditingController();
+    bool _validate = false;
+
     void signUser(){
-      Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => MySignUp())
-      );
+      setState(() {
+        userNameConroller.text.isEmpty ? _validate = true :_validate = false;
+        // userNameConroller.text.isEmpty ? validate = true : validate = false;
+      });
+      // Navigator.push(context, MaterialPageRoute(builder: (context)=> Home()));
     }
-    // void signUser(){
-    //   Navigator.push(context, MaterialPageRoute(builder: (context)=>const MyHomePage()));
-    // }
 
     void signUserIn(){
       Navigator.push(
@@ -34,7 +35,7 @@ class _MyLoginState extends State<MyLogin> {
 
     }
     return Scaffold(resizeToAvoidBottomInset: false,
-        backgroundColor: Color(0xFFCFF9F4),
+        backgroundColor: Color(0xff302b63).withOpacity(0.9),
         body: SafeArea(
           child: Center(
             child: Column(
@@ -65,6 +66,7 @@ class _MyLoginState extends State<MyLogin> {
                 controller: userNameConroller,
                   hintText:'UserName',
                   obsecureText: false,
+                    // errorText: _validate ? 'Value Can't Be Empty' : null,
                 ),
 
                 //empty Space
@@ -79,12 +81,12 @@ class _MyLoginState extends State<MyLogin> {
 
                 SizedBox(height: 5,),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 50.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text('Forget Password',style: TextStyle(
-                        color: Colors.red,
+                        color: Colors.white,
                         decoration: TextDecoration.underline
                       ),),
                     ],
@@ -103,12 +105,12 @@ class _MyLoginState extends State<MyLogin> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("New Member !! "),
+                    Text("New Member !!",style: TextStyle(color: Colors.yellow),),
 
                     new InkWell(
                     onTap:signUserIn,
                     child:(Text("SignUp",style: TextStyle
-                    (decoration: TextDecoration.underline,color: Colors.red,fontSize: 16),)))
+                    (decoration: TextDecoration.underline,color: Colors.white,fontSize: 16),)))
 
                   ],
 

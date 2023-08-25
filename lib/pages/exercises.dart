@@ -26,7 +26,8 @@ class Exercises extends StatelessWidget {
                       scrollDirection: Axis.vertical,
                       itemCount: _exercises.length,
                       itemBuilder: (context, index) {
-                        return Activity_detail(child: _exercises[index]);
+                        return Scaffold();
+                        // return Activity_detail(child: _exercises[index]);
                       }),
                 ),
               ),

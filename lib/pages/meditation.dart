@@ -28,7 +28,8 @@ class Meditation extends StatelessWidget {
                       scrollDirection: Axis.vertical,
                       itemCount: _meditation.length,
                       itemBuilder: (context, index) {
-                        return Activity_detail(child: _meditation[index]);
+                        return Scaffold();
+                        // return Activity_detail(child: _meditation[index]);
                       }),
                 ),
               ),
