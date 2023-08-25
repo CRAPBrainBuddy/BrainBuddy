@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "718036611733",
+    "project_id": "brainbuddy-de4f2",
+    "storage_bucket": "brainbuddy-de4f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718036611733:android:2a073e4b774c0a99bee19c",
+        "android_client_info": {
+          "package_name": "com.example.brainbuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718036611733-tv7ksb3ijmkhcnk57dk9q1toja6j6k6r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmqyJ76WctGrxYYoGho-q2CBg_wDOrcvg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718036611733-tv7ksb3ijmkhcnk57dk9q1toja6j6k6r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
