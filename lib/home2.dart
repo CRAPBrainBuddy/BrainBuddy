@@ -21,12 +21,19 @@ class _HomeState extends State<Home> {
     'Activity 5'
   ];
   final List _image = [
-    'assests/activities2.jpg',
-    'assests/appointment.jpg',
-    "assests/banner.jpg",
-    'assests/banner2.jpg',
-    "assests/expert2.png"
+    "assests/im1.jpeg",
+    "assests/im2.jpeg",
+    "assests/im3.jpeg",
+    "assests/im4.jpeg",
+    "assests/im5.jpeg",
   ];
+  // final List _image = [
+  //   'assests/activities2.jpg',
+  //   'assests/appointment.jpg',
+  //   "assests/banner.jpg",
+  //   'assests/banner2.jpg',
+  //   "assests/expert2.png"
+  // ];
   // final List _image = ['activities.jpg','appointment.jpg',"banner.jpg",'banner2.jpg',"expert.jpg"];
   final List _podcast = [
     'podcast 1',
@@ -68,11 +75,10 @@ class _HomeState extends State<Home> {
   }
   @override
   Widget build(BuildContext context) {
-    void music(){
-      print("hello");
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => MusicPlayer()));
-    }
+    // void music(){
+    //   Navigator.push(
+    //       context, MaterialPageRoute(builder: (context) => MusicPlayer()));
+    // }
     return Scaffold(
       floatingActionButton: Padding(
         padding: const EdgeInsets.only(right: 10.0, bottom: 20.0),
@@ -257,12 +263,9 @@ class _HomeState extends State<Home> {
                                   scrollDirection: Axis.horizontal,
                                   itemCount: _music.length,
                                   itemBuilder: (context, index) {
-                                    return InkWell(
-                                      onTap: music,
-                                      child: Activity_detail(
-                                        child: _music[index],
-                                        image: _image[index],
-                                      ),
+                                    return Activity_detail(
+                                      child: _music[index],
+                                      image: _image[index],
                                     );
                                   }),
                             ),
